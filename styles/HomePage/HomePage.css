@@ -1,0 +1,24 @@
+.home {
+  height: 100vh;
+  width: 100vw;
+  background: #000000b6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .bg {
+  background: red;
+  z-index: -1;
+}
+
+.home .title {
+  color: #fafafa;
+}
+/*# sourceMappingURL=HomePage.css.map */
