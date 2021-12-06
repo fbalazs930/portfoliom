@@ -1,6 +1,6 @@
 import Particles from "react-tsparticles";
 
-export const ParticlesBg = () => {
+export default function ParticlesBg(){
     return (
         <Particles className="bg"
                 id="tsparticles"

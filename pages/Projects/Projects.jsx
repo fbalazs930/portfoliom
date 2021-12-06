@@ -1,7 +1,7 @@
 import projectData from './ProjectsData.jsx';
 import Image from 'next/image';
 
-export const Projects = () => {
+export default function Projects(){
     return (
         <div className='projects'>
             <h1>Munkáim</h1>

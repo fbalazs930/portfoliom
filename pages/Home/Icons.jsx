@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export const Icons = () => {
+export default function Icons(){
     const [color, setColor] = useState(true);
     useEffect(() => {
         window.addEventListener('scroll', () => {

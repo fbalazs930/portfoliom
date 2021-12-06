@@ -1,6 +1,6 @@
 import { CVSVG } from "./CVSVG"
 
-export const CV = () => {
+export default function CV(){
     return (
         <div className='cv'>
             <h1>Önéletrajz</h1>

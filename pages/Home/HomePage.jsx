@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 
-export const HomePage = () => {
+export default function HomePage(){
     return (
         <div className='home'>
             <div className='home-content'>

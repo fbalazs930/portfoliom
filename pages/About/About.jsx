@@ -1,6 +1,6 @@
 import { AboutSVG } from "./AboutSVG"
 
-export const About = () => {
+export default function About(){
     return (
         <div className='about'>
             <h1>Bemutatkozás</h1>

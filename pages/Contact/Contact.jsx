@@ -1,6 +1,6 @@
 import emailjs from 'emailjs-com';
 
-export const Contact = () => {
+export default function Contact(){
     function sendEmail(e) {
         e.preventDefault();
         emailjs.sendForm('service_33gx7rg', 'template_109x6fc', e.target, 'user_J1ob3Ryk5QebuFnmmgVdQ')
