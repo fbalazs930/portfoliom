@@ -1,0 +1,91 @@
+.about {
+    min-height: 90vh;
+    background: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    gap: 2rem;
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: calc(70vw + 7rem);
+        .top {
+            min-height: 40vh;
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            grid-template-areas: "illus desc";
+            gap: 4rem;
+            @media screen and (max-width: 940px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                grid-template-areas:
+                    "desc"
+                    "illus";
+                gap: 1rem;
+                .text {
+                    padding: 0 1rem;
+                }
+            }
+            .about-illustration {
+                grid-area: illus;
+                display: flex;
+                align-items: center;
+                svg {
+                    width: 90%;
+                    height: 90%;
+                    margin: auto;
+                }
+            }
+            .text {
+                grid-area: desc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                line-height: 27px;
+                p {
+                    margin: 1rem 0;
+                    padding: 0 0.3rem;
+                    font-size: clamp(1.1rem, 1vw, 2rem);
+                }
+            }
+        }
+
+        .bottom {
+            .langs {
+                h2 {
+                    padding: 0 1rem 1.5rem 1rem;
+                    text-align: center;
+                    color: var(--between);
+                }
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 4rem;
+                    font-size: 1.1rem;
+                    i {
+                        font-size: 1.7rem;
+                    }
+                    @media only screen and (max-width: 500px) {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr 1fr;
+                        gap: 2rem;
+                        padding: 2rem 4rem 0 4rem;
+                    }
+                    .lang {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.contact {
+    min-height: 90vh;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    @media only screen and (max-width: 940px) {
+        padding: 5rem 0 0 0;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: calc(40vw + 3.5rem);
+        min-height: 50vh;
+        gap: 1rem;
+        @media only screen and (max-width: 1050px) {
+            width: calc(80vw + 3.5rem);
+        }
+        input,
+        textarea {
+            width: 80%;
+            height: 5vh;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            box-shadow: 0 0 0 1px var(--between);
+            padding: 0.5rem;
+            &:focus {
+                box-shadow: 0 0 0 2px var(--between);
+            }
+        }
+        textarea {
+            resize: none;
+            min-height: 20vh;
+            line-height: 25px;
+        }
+        button {
+            cursor: pointer;
+            font-size: clamp(1rem, 4vw, 1.3rem);
+            background: var(--between);
+            color: #fff;
+            border: 2px solid var(--between);
+            padding: 0.8rem 1.3rem;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            &:hover {
+                color: var(--between);
+                &::after {
+                    transition: all 0.3s ease-out;
+                    transform: skewX(-45deg) scale(1, 1);
+                }
+            }
+            &::after {
+                content: "";
+                background: #ecf0f1;
+                position: absolute;
+                z-index: -1;
+                padding: 1rem 1.5rem;
+                display: block;
+                transition: all 0.3s ease;
+                left: -30%;
+                right: -30%;
+                top: 0;
+                bottom: 0;
+                transform: skewX(-45deg) scale(0, 1);
+            }
+        }
+    }
+    position: relative;
+    .c-icons {
+        a {
+            color: var(--dark);
+        }
+        position: static;
+        margin: 0 auto 0 0;
+        padding: 0 0 0 10px;
+        display: none;
+        @media only screen and (max-width: 940px) {
+            display: flex;
+        }
+    }
+}

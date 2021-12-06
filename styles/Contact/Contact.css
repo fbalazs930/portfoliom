@@ -1,0 +1,134 @@
+.contact {
+  min-height: 90vh;
+  background-color: var(--light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 940px) {
+  .contact {
+    padding: 5rem 0 0 0;
+  }
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(40vw + 3.5rem);
+  min-height: 50vh;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 1050px) {
+  .contact form {
+    width: calc(80vw + 3.5rem);
+  }
+}
+
+.contact form input,
+.contact form textarea {
+  width: 80%;
+  height: 5vh;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 0 0 1px var(--between);
+          box-shadow: 0 0 0 1px var(--between);
+  padding: 0.5rem;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  -webkit-box-shadow: 0 0 0 2px var(--between);
+          box-shadow: 0 0 0 2px var(--between);
+}
+
+.contact form textarea {
+  resize: none;
+  min-height: 20vh;
+  line-height: 25px;
+}
+
+.contact form button {
+  cursor: pointer;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  background: var(--between);
+  color: #fff;
+  border: 2px solid var(--between);
+  padding: 0.8rem 1.3rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.contact form button:hover {
+  color: var(--between);
+}
+
+.contact form button:hover::after {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: skewX(-45deg) scale(1, 1);
+          transform: skewX(-45deg) scale(1, 1);
+}
+
+.contact form button::after {
+  content: "";
+  background: #ecf0f1;
+  position: absolute;
+  z-index: -1;
+  padding: 1rem 1.5rem;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  left: -30%;
+  right: -30%;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: skewX(-45deg) scale(0, 1);
+          transform: skewX(-45deg) scale(0, 1);
+}
+
+.contact .c-icons {
+  position: static;
+  margin: 0 auto 0 0;
+  padding: 0 0 0 10px;
+  display: none;
+}
+
+.contact .c-icons a {
+  color: var(--dark);
+}
+
+@media only screen and (max-width: 940px) {
+  .contact .c-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=Contact.css.map */

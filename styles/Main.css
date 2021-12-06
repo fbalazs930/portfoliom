@@ -65,7 +65,7 @@ strong {
 .App .bg2 {
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.781);
+  background: rgba(20, 20, 20, 0.918);
   position: fixed;
   top: 0;
   left: 0;
@@ -413,7 +413,6 @@ body {
      object-fit: contain;
   height: 100%;
   width: 100%;
-  cursor: pointer;
 }
 
 .projects .projects-container .project .top .textarea {
@@ -820,5 +819,294 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
+}
+
+.about {
+  min-height: 90vh;
+  background: var(--light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
+  gap: 2rem;
+}
+
+.about .about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  width: calc(70vw + 7rem);
+}
+
+.about .about-container .top {
+  min-height: 40vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.4fr;
+      grid-template-columns: 1fr 1.4fr;
+      grid-template-areas: "illus desc";
+  gap: 4rem;
+}
+
+@media screen and (max-width: 940px) {
+  .about .about-container .top {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "desc" "illus";
+    gap: 1rem;
+  }
+  .about .about-container .top .text {
+    padding: 0 1rem;
+  }
+}
+
+.about .about-container .top .about-illustration {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: illus;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .about-container .top .about-illustration svg {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+}
+
+.about .about-container .top .text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: desc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 27px;
+}
+
+.about .about-container .top .text p {
+  margin: 1rem 0;
+  padding: 0 0.3rem;
+  font-size: clamp(1.1rem, 1vw, 2rem);
+}
+
+.about .about-container .bottom .langs h2 {
+  padding: 0 1rem 1.5rem 1rem;
+  text-align: center;
+  color: var(--between);
+}
+
+.about .about-container .bottom .langs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4rem;
+  font-size: 1.1rem;
+}
+
+.about .about-container .bottom .langs ul i {
+  font-size: 1.7rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .about .about-container .bottom .langs ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 4rem 0 4rem;
+  }
+}
+
+.about .about-container .bottom .langs ul .lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact {
+  min-height: 90vh;
+  background-color: var(--light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 940px) {
+  .contact {
+    padding: 5rem 0 0 0;
+  }
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(40vw + 3.5rem);
+  min-height: 50vh;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 1050px) {
+  .contact form {
+    width: calc(80vw + 3.5rem);
+  }
+}
+
+.contact form input,
+.contact form textarea {
+  width: 80%;
+  height: 5vh;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 0 0 1px var(--between);
+          box-shadow: 0 0 0 1px var(--between);
+  padding: 0.5rem;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  -webkit-box-shadow: 0 0 0 2px var(--between);
+          box-shadow: 0 0 0 2px var(--between);
+}
+
+.contact form textarea {
+  resize: none;
+  min-height: 20vh;
+  line-height: 25px;
+}
+
+.contact form button {
+  cursor: pointer;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  background: var(--between);
+  color: #fff;
+  border: 2px solid var(--between);
+  padding: 0.8rem 1.3rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.contact form button:hover {
+  color: var(--between);
+}
+
+.contact form button:hover::after {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: skewX(-45deg) scale(1, 1);
+          transform: skewX(-45deg) scale(1, 1);
+}
+
+.contact form button::after {
+  content: "";
+  background: #ecf0f1;
+  position: absolute;
+  z-index: -1;
+  padding: 1rem 1.5rem;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  left: -30%;
+  right: -30%;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: skewX(-45deg) scale(0, 1);
+          transform: skewX(-45deg) scale(0, 1);
+}
+
+.contact .c-icons {
+  position: static;
+  margin: 0 auto 0 0;
+  padding: 0 0 0 10px;
+  display: none;
+}
+
+.contact .c-icons a {
+  color: var(--dark);
+}
+
+@media only screen and (max-width: 940px) {
+  .contact .c-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=Main.css.map */

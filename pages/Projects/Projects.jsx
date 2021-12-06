@@ -1,30 +1,7 @@
-import React, { useState, useEffect } from 'react';
 import projectData from './ProjectsData.jsx';
-import ScrollContainer from 'react-indiana-drag-scroll';
 import Image from 'next/image';
 
 export const Projects = () => {
-    const [click, setClick] = useState(false);
-    const [id, setId] = useState(0);
-    const [images, setImages] = useState([]);
-    const close = (e) => {
-        if (e.keyCode === 27) {
-            setClick(false)
-        }
-    }
-    useEffect(() => {
-        window.addEventListener('keyup', close)
-        return () => { window.removeEventListener('keyup', close) }
-    }, [])
-    const clicked = (e) => {
-        if (e.target.className.includes("exit")) {
-            setClick(false);
-        }
-    }
-    useEffect(() => {
-        window.addEventListener('click', clicked)
-        return () => { window.removeEventListener('click', clicked) }
-    }, [])
     return (
         <div className='projects'>
             <h1>Munkáim</h1>
@@ -34,7 +11,7 @@ export const Projects = () => {
                         <div className="top">
                             <div className='p-thumbnail'>
                                 <div className="img">
-                                    <Image className="image" layout='responsive' width='300' height='200' onClick={() => { setClick(true); setImages(project.images) }} src={project.pThumbnail} alt="project" />
+                                    <Image className="image" layout='responsive' width='300' height='200' src={project.pThumbnail} alt="project" />
                                 </div>
                             </div>
                             <div className='textarea'>
@@ -65,27 +42,6 @@ export const Projects = () => {
                         </div>
                     </div>
                 ))}
-
-                {click &&
-                    <div className="full-screen-image exit">
-                        <div className="exit">
-                            <i onClick={() => { setClick(false) }} className="fas fa-times-circle">
-                            </i>
-                        </div>
-                        <div className="f-img">
-                            <div className="img">
-                                <Image className="image" layout='responsive' width='800' height='600' src={images[id].src} alt='Project' />
-                            </div>
-                        </div>
-                        <ScrollContainer className="scroll-container" hideScrollbars='false'>
-                            {images.map(img => (
-                                <div className="img" key={img.id}>
-                                    <Image className="image" layout='responsive' width='300' height='200' onClick={() => { setId(img.id) }} src={img.src} alt='Project' />
-                                </div>
-                            ))}
-                        </ScrollContainer>
-                    </div>
-                }
             </div>
         </div>
     )

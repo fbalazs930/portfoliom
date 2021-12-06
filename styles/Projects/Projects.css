@@ -76,7 +76,6 @@
      object-fit: contain;
   height: 100%;
   width: 100%;
-  cursor: pointer;
 }
 
 .projects .projects-container .project .top .textarea {

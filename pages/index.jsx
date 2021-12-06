@@ -5,6 +5,8 @@ import { HomePage } from './Home/HomePage'
 import { Icons } from './Home/Icons'
 import { Projects } from './Projects/Projects'
 import { CV } from './CV/CV'
+import { About } from './About/About'
+import { Contact } from './Contact/Contact'
 
 export default function Home() {
   return (
@@ -22,6 +24,8 @@ export default function Home() {
       <Icons />
       <Projects />
       <CV />
+      <About />
+      <Contact />
     </div>
   )
 }
