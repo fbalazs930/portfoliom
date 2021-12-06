@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export const Icons = () => {
     const [color, setColor] = useState(true);
-    /* window.addEventListener('scroll', () => {
-        if (window.scrollY >= 50 && window.innerWidth >= 940) {
-            setColor(false);
-        }
-        else {
-            setColor(true);
-        }
-    }); */
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 50 && window.innerWidth >= 940) {
+                setColor(false);
+            }
+            else {
+                setColor(true);
+            }
+        });
+    }, [])
     return (
         <div className='icons'>
             <a target='_blank' href="https://www.linkedin.com/in/f-balazs/" rel="noreferrer">
