@@ -1,7 +1,5 @@
 .home {
-  height: 100vh;
-  width: 100vw;
-  background: #000000b6;
+  min-height: 89vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,14 +9,59 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: var(--light);
 }
 
-.home .bg {
-  background: red;
+.home .home-content {
+  padding: 0 0 20vh 0;
+}
+
+.home .home-content h1 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+}
+
+.home .home-content h3 {
+  font-size: clamp(1.3rem, 6vw, 2.3rem);
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.home .home-content .home-btn button {
+  cursor: pointer;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  background: var(--between);
+  color: #fff;
+  border: 2px solid var(--between);
+  padding: 0.8rem 1.3rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.home .home-content .home-btn button:hover {
+  color: var(--between);
+}
+
+.home .home-content .home-btn button:hover::after {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: skewX(-45deg) scale(1, 1);
+          transform: skewX(-45deg) scale(1, 1);
+}
+
+.home .home-content .home-btn button::after {
+  content: "";
+  background: #ecf0f1;
+  position: absolute;
   z-index: -1;
-}
-
-.home .title {
-  color: #fafafa;
+  padding: 1rem 1.5rem;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: skewX(-45deg) scale(0, 1);
+          transform: skewX(-45deg) scale(0, 1);
 }
 /*# sourceMappingURL=HomePage.css.map */

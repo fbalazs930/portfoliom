@@ -1,0 +1,17 @@
+.icons {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    position: fixed;
+    left: 13px;
+    bottom: 7px;
+    z-index: 3;
+    i {
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 940px) {
+        display: none;
+    }
+}

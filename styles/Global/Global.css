@@ -3,6 +3,95 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --light: #feffff;
+  --between: #2b7a78;
+  --dark: #17252a;
+  --titleSize: clamp(1.9rem, 6vw, 2.5rem);
+}
+
+#iconLight {
+  color: var(--light);
+}
+
+#iconDark {
+  color: #0a1013;
+}
+
+strong {
+  font-weight: 530;
+}
+
+:root {
+  scrollbar-color: #c8c8c8 #313131 !important;
+  scrollbar-width: thin !important;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #313131;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c8c8c8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #eeeeee;
+}
+
+.App {
+  min-height: 100vh;
+  color: var(--dark);
+}
+
+.App .bg {
+  width: 100vw;
+  height: 100vh;
+  background: var(--dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.App .bg2 {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.781);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+body {
+  background: #181818;
+  -webkit-animation: loaded 1s 1;
+          animation: loaded 1s 1;
+}
+
+@-webkit-keyframes loaded {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loaded {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=Global.css.map */

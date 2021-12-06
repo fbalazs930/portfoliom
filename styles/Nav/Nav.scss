@@ -1,0 +1,84 @@
+.nav {
+    transition: all 0.3s ease;
+    height: 11vh;
+    display: grid;
+    grid-template-columns: 5% auto auto 5%;
+    grid-template-areas: ". logo links .";
+    align-items: center;
+    box-shadow: 0 2px 4px -2px var(--dark);
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    color: var(--light);
+    @media only screen and (max-width: 768px) {
+        grid-template-columns: 1em auto 1fr auto 1em;
+        grid-template-areas: ". logo . menu-icon .";
+    }
+    .logo {
+        cursor: pointer;
+        grid-area: logo;
+        font-size: clamp(2.3rem, 5vw, 3rem);
+    }
+    .nav-menu {
+        grid-area: links;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 25px;
+        position: relative;
+        height: 100%;
+        .nav-link {
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: clamp(1rem, 2vw, 1.1rem);
+            transition: border-bottom 0.1s ease-in-out;
+            &:hover {
+                transition: border-bottom 0.1s ease-in-out;
+                border-bottom: 3px solid #eee;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            opacity: 0;
+            height: 70vh;
+            width: 100vw;
+            top: 0;
+            position: fixed;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0;
+            padding: 100px 0;
+            left: -1000px;
+            background-color: var(--dark);
+            transition: all 0.2s ease-in-out;
+            .nav-link {
+                display: flex;
+                justify-content: center;
+                font-size: 1.3rem;
+                &:hover {
+                    border: none;
+                }
+            }
+        }
+    }
+    .active {
+        opacity: 1;
+        left: 0;
+        transition: left 0.2s ease-in-out;
+    }
+    .menu-icon {
+        cursor: pointer;
+        z-index: 5;
+        display: none;
+        font-size: 30px;
+        grid-area: menu-icon;
+        @media only screen and (max-width: 768px) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+}
