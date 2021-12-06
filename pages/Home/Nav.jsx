@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from "react-scroll";
 
 export const Nav = () => {
-    /* //#region Menu
+    //#region Menu
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
     const closeMenu = () => { setClick(false) };
@@ -36,13 +36,9 @@ export const Nav = () => {
             top: 0,
             behavior: "smooth"
         });
-    }; */
-    const scrollToTop = ()=>{};
-    const click = ()=>{};
-    const closeMenu = ()=>{};
-    const handleClick = ()=>{};
+    };
     return (
-        <div className="nav">
+        <div className="nav" style={nav}>
             <i onClick={scrollToTop} className="logo fab fa-wolf-pack-battalion"></i>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={-80} duration={500}>
