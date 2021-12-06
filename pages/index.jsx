@@ -4,6 +4,7 @@ import { Nav } from './Home/Nav'
 import { HomePage } from './Home/HomePage'
 import { Icons } from './Home/Icons'
 import { Projects } from './Projects/Projects'
+import { CV } from './CV/CV'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <HomePage />
       <Icons />
       <Projects />
+      <CV />
     </div>
   )
 }

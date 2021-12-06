@@ -1,0 +1,84 @@
+.cv {
+    min-height: 90vh;
+    background: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    h1 {
+        font-size: var(--titleSize);
+    }
+    .cv-container {
+        width: calc(70vw + 3.5rem);
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-areas: "text svg";
+        gap: 3rem;
+        @media screen and (max-width: 940px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+                "text"
+                "svg";
+            gap: 0;
+        }
+        .text {
+            grid-area: text;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            div {
+                text-align: center;
+                h3 {
+                    margin: 0 0 2rem 0;
+                }
+                button {
+                    cursor: pointer;
+                    font-size: clamp(1rem, 4vw, 1.3rem);
+                    background: var(--between);
+                    color: #fff;
+                    border: 2px solid var(--between);
+                    padding: 0.8rem 1.3rem;
+                    position: relative;
+                    z-index: 1;
+                    overflow: hidden;
+                    &:hover {
+                        color: var(--between);
+                        &::after {
+                            transition: all 0.3s ease-out;
+                            transform: skewX(-45deg) scale(1, 1);
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        background: #ecf0f1;
+                        position: absolute;
+                        z-index: -1;
+                        padding: 1rem 1.5rem;
+                        display: block;
+                        transition: all 0.3s ease;
+                        left: -25%;
+                        right: -25%;
+                        top: 0;
+                        bottom: 0;
+                        transform: skewX(-45deg) scale(0, 1);
+                    }
+                }
+            }
+        }
+        .cv-illustration {
+            height: calc(50vh + 3.5rem);
+            grid-area: svg;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0 0 0;
+            svg {
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+    }
+}

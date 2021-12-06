@@ -6,11 +6,13 @@ export const Nav = () => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
     const closeMenu = () => { setClick(false) };
-    window.addEventListener('resize', () => {
-        setClick(false);
-        if (window.innerWidth < 768) {
-        }
-    });
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setClick(false);
+            if (window.innerWidth < 768) {
+            }
+        });
+    }, [])
     //#endregion
 
     //#region NavBg

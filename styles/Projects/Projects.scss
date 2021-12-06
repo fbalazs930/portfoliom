@@ -37,7 +37,7 @@
                 }
                 .p-thumbnail {
                     grid-area: pImg;
-                    .img{
+                    .img {
                         width: 100%;
                         height: 100%;
                         .image {
@@ -45,7 +45,6 @@
                             height: 100%;
                             width: 100%;
                             cursor: pointer;
-                            position: fixed;
                         }
                     }
                 }
@@ -171,14 +170,14 @@
             background: #000;
             margin: auto;
             height: clamp(22rem, 45vw, 33rem);
-            .img{
-                width: 300px;
-                height: 200px;
-            }
-            img {
-                border-radius: 3px;
+            .img {
+                width: 100%;
                 height: 100%;
-                width: auto;
+                .image {
+                    border-radius: 3px;
+                    height: 100%;
+                    width: auto;
+                }
             }
             @media only screen and (max-width: 560px) {
                 display: none;
@@ -207,14 +206,14 @@
                     transition: all 0.2s;
                     transform: scale(1.15);
                 }
-                @media only screen and (max-width:  560px) {
+                @media only screen and (max-width: 560px) {
                     height: 50vh;
                     &:hover {
                         transform: none;
                     }
                 }
             }
-            @media only screen and (max-width:  560px) {
+            @media only screen and (max-width: 560px) {
                 justify-content: flex-start;
             }
         }

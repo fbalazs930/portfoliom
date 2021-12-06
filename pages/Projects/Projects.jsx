@@ -1,7 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import projectData from './ProjectsData.jsx';
-import { ScrollContainer } from 'react-indiana-drag-scroll';
+import ScrollContainer from 'react-indiana-drag-scroll';
 import Image from 'next/image';
 
 export const Projects = () => {
@@ -13,20 +12,19 @@ export const Projects = () => {
             setClick(false)
         }
     }
-    /* useEffect(() => {
+    useEffect(() => {
         window.addEventListener('keyup', close)
         return () => { window.removeEventListener('keyup', close) }
-    }, []) */
+    }, [])
     const clicked = (e) => {
         if (e.target.className.includes("exit")) {
             setClick(false);
         }
     }
-   /*  useEffect(() => {
+    useEffect(() => {
         window.addEventListener('click', clicked)
         return () => { window.removeEventListener('click', clicked) }
-    }, []) */
-    console.log(projectData)
+    }, [])
     return (
         <div className='projects'>
             <h1>Munkáim</h1>
@@ -75,11 +73,15 @@ export const Projects = () => {
                             </i>
                         </div>
                         <div className="f-img">
-                        <Image className="image" layout='fill' src={images[id].src} alt='Project' />
+                            <div className="img">
+                                <Image className="image" layout='responsive' width='800' height='600' src={images[id].src} alt='Project' />
+                            </div>
                         </div>
                         <ScrollContainer className="scroll-container" hideScrollbars='false'>
                             {images.map(img => (
-                                <Image key={img.id} className="image" layout='fill' onClick={() => { setId(img.id) }} src={img.src} alt='Project' />
+                                <div className="img" key={img.id}>
+                                    <Image className="image" layout='responsive' width='300' height='200' onClick={() => { setId(img.id) }} src={img.src} alt='Project' />
+                                </div>
                             ))}
                         </ScrollContainer>
                     </div>
